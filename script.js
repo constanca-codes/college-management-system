@@ -1,6 +1,6 @@
 document.querySelectorAll('.nav-link').forEach(item => {
     item.addEventListener('click', function(e) {
-        e.preventDefault(); // Prevent default link behavior
+        e.preventDefault(); 
         
         
         document.querySelectorAll('.nav-link').forEach(i => {
@@ -27,7 +27,7 @@ document.querySelectorAll('.nav-link').forEach(item => {
 
 function configurarDragAndDrop() {
     let draggableCards = document.querySelectorAll('.card');
-    let grid = document.querySelector('.grid');  // Alterado para .grid
+    let grid = document.querySelector('.grid');  
     let draggedCard = null;
     
     draggableCards.forEach(card => {
@@ -66,14 +66,14 @@ function configurarDragAndDrop() {
                 this.style.backgroundColor = 'white';
                 
                 
-                const allCards = Array.from(grid.children);  // Alterado para .grid
+                const allCards = Array.from(grid.children);  
                 const indexDragged = allCards.indexOf(draggedCard);
                 const indexTarget = allCards.indexOf(this);
                 
                 if (indexDragged < indexTarget) {
-                    grid.insertBefore(draggedCard, this.nextSibling);  // Alterado para .grid
+                    grid.insertBefore(draggedCard, this.nextSibling);  
                 } else {
-                    grid.insertBefore(draggedCard, this);  // Alterado para .grid
+                    grid.insertBefore(draggedCard, this);  
                 }
             }
         });
@@ -119,7 +119,7 @@ document.querySelectorAll('.chat-item').forEach(chat => {
     });
 });
 
-// Simulação de funcionalidades de botão
+
 document.querySelectorAll('.card-action').forEach(action => {
     action.addEventListener('click', function() {
         if (this.querySelector('.fa-plus')) {
