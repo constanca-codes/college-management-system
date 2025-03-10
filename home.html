@@ -1,0 +1,938 @@
+<html lang="pt-PT"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestão Universitária - Nova SBE</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js" defer></script>
+    
+</head>
+<body>
+<div class="container">
+       <div class="sidebar">
+	     <div class="sidebar-header">
+        <img src="https://th.bing.com/th/id/OIP.ZemhtX4n3d0EMiTGep90kQHaDh?rs=1&pid=ImgDetMain" alt="Nova SBE Logo">
+          </div>
+		  
+          <ul class="nav-menu">
+		      <li class="nav-item">
+                <a href="#" class="nav-link" data-target="painel-principal">
+                    <i class="fas fa-tachometer-alt"></i> Painel Principal
+                </a>
+              </li>
+			  <li class="nav-item">
+                <a href="#" class="nav-link" data-target="cursos">
+                    <i class="fas fa-graduation-cap"></i> Cursos
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link" data-target="disciplinas">
+                    <i class="fas fa-book"></i> Disciplinas
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link" data-target="professores">
+                    <i class="fas fa-chalkboard-teacher"></i> Professores
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link" data-target="alunos">
+                    <i class="fas fa-user-graduate"></i> Alunos
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="fas fa-clipboard-list"></i> Avaliações
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="fas fa-cog"></i> Definições
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="fas fa-sign-out-alt"></i> Terminar Sessão
+                </a>
+            </li>
+          </ul>
+	    </div>
+	   
+	   
+	
+	<div class="main-content">
+	     <div class="top-bar">
+                <div class="search-container">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" class="search-input" placeholder="Pesquisar...">
+                </div>
+                <div class="user-info">
+                    <div class="user-avatar">
+                        <i class="fa fa-user"></i>
+                    </div>
+                    <div class="user-greeting">
+                        <div>Bom dia,</div>
+                        <div class="user-name-header">Constança Morão</div>
+                    </div>
+                </div>
+          </div>
+		  <div class="content-container"> 
+		        <div class="content-page active" id="painel-principal">
+				     <div class="grid">
+                     <div class="card" draggable="true">
+                      <div class="card-header">
+                       <div class="card-header-left">
+                        <div class="card-icon bg-primary">
+                        <i class="fas fa-calendar"></i>
+                        </div>
+                    <div class="card-title">Calendário Acadêmico</div>
+                </div>
+                <div class="card-actions">
+                    <div class="card-action">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="card-action">
+                        <i class="fas fa-ellipsis-h"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card-content">
+                <div class="calendar">
+                    <div class="calendar-header">
+                        <button class="card-action"><i class="fas fa-chevron-left"></i></button>
+                        <div class="calendar-title">Março 2025</div>
+                        <button class="card-action"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                    <div class="calendar-grid">
+                        <div class="calendar-day-name">D</div>
+                        <div class="calendar-day-name">S</div>
+                        <div class="calendar-day-name">T</div>
+                        <div class="calendar-day-name">Q</div>
+                        <div class="calendar-day-name">Q</div>
+                        <div class="calendar-day-name">S</div>
+                        <div class="calendar-day-name">S</div>
+
+                        <!-- Exemplo de dias do calendário -->
+                        <div class="calendar-day">1</div>
+                        <div class="calendar-day">2</div>
+                        <div class="calendar-day">3</div>
+                        <div class="calendar-day">4</div>
+                        <div class="calendar-day">5</div>
+                        <div class="calendar-day">6</div>
+                        <div class="calendar-day">7</div>
+                        <div class="calendar-day">8</div>
+                        <div class="calendar-day today">9</div>
+                        <div class="calendar-day has-event">10</div>
+                        <div class="calendar-day">11</div>
+                        <div class="calendar-day has-event">12</div>
+                        <div class="calendar-day">13</div>
+                        <div class="calendar-day">14</div>
+                        <!-- Continua... -->
+                    </div>
+                </div>
+
+                <div class="event-list">
+                    <div class="event-item">
+                        <div class="event-title">Início do Semestre Letivo</div>
+                        <div class="event-date">10 de Março, 2025</div>
+                    </div>
+                    <div class="event-item exam">
+                        <div class="event-title">Exames Finais - Engenharia</div>
+                        <div class="event-date">12 de Março, 2025</div>
+                    </div>
+                    <div class="event-item holiday">
+                        <div class="event-title">Feriado Acadêmico</div>
+                        <div class="event-date">15 de Março, 2025</div>
+                    </div>
+                </div>
+
+                <button class="btn-add">
+                    <i class="fas fa-plus"></i> Adicionar Evento
+                </button>
+            </div>
+			</div>
+			      <!-- Notícias e Anúncios -->
+        <div class="card" draggable="true">
+            <div class="card-header">
+                <div class="card-header-left">
+                    <div class="card-icon bg-accent">
+                        <i class="fas fa-newspaper"></i>
+                    </div>
+                    <div class="card-title">Notícias e Anúncios</div>
+                </div>
+                <div class="card-actions">
+                    <div class="card-action">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="card-action">
+                        <i class="fas fa-ellipsis-h"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card-content">
+                <div class="news-item">
+                    <div class="news-title">Alteração no Cronograma de Aulas</div>
+                    <div class="news-meta">
+                        <div class="news-date">05/03/2025</div>
+                        <div class="news-category">Acadêmico</div>
+                    </div>
+                    <div class="news-content">
+                        As aulas do curso de Engenharia de Software serão transferidas para o prédio B a partir da próxima semana.
+                    </div>
+                </div>
+                
+                <div class="news-item">
+                    <div class="news-title">Novas Regras para Trabalhos Acadêmicos</div>
+                    <div class="news-meta">
+                        <div class="news-date">28/02/2025</div>
+                        <div class="news-category">Regulamentos</div>
+                    </div>
+                    <div class="news-content">
+                        A partir deste semestre, todos os trabalhos acadêmicos devem seguir as normas ABNT atualizadas em 2025.
+                    </div>
+                </div>
+                
+                <div class="news-item">
+                    <div class="news-title">Evento: Semana de Tecnologia</div>
+                    <div class="news-meta">
+                        <div class="news-date">25/02/2025</div>
+                        <div class="news-category">Eventos</div>
+                    </div>
+                    <div class="news-content">
+                        A Semana de Tecnologia acontecerá de 15 a 19 de abril. Inscrições abertas a partir de 20 de março.
+                    </div>
+                </div>
+                
+                <button class="btn-add">
+                    <i class="fas fa-plus"></i> Adicionar Notícia
+                </button>
+            </div>
+        </div>
+		      <div class="card" style="padding: 0; overflow: hidden;">
+                   <img src="https://www.novasbe.unl.pt/Portals/0/2024/Masters-25_Generic-Img_Scholarships_800x600.jpg?w=1400" alt="Campus NOVA SBE Carcavelos" 
+                     style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+        
+        <!-- Mensagens e Chat -->
+        <div class="card" draggable="true">
+            <div class="card-header">
+                <div class="card-header-left">
+                    <div class="card-icon bg-success">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="card-title">Mensagens e Chat</div>
+                </div>
+                <div class="card-actions">
+                    <div class="card-action">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="card-action">
+                        <i class="fas fa-ellipsis-h"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card-content">
+                <div class="messages-header">
+                    <div class="tabs">
+                        <div class="tab active">Recentes</div>
+                        <div class="tab">Secretaria</div>
+                        <div class="tab">Disciplinas</div>
+                    </div>
+                </div>
+                
+                <div class="chat-list">
+                    <div class="chat-item active">
+                        <div class="chat-avatar">SC</div>
+                        <div class="chat-info">
+                            <div class="chat-name">Secretaria Acadêmica</div>
+                            <div class="chat-message">Informamos que o calendário...</div>
+                        </div>
+                        <div class="chat-meta">
+                            <div class="chat-time">10:30</div>
+                            <div class="chat-badge">2</div>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-item">
+                        <div class="chat-avatar">MS</div>
+                        <div class="chat-info">
+                            <div class="chat-name">Prof. Maria Silva</div>
+                            <div class="chat-message">Os slides da aula de hoje...</div>
+                        </div>
+                        <div class="chat-meta">
+                            <div class="chat-time">09:15</div>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-item">
+                        <div class="chat-avatar">CS</div>
+                        <div class="chat-info">
+                            <div class="chat-name">Coordenação Curso</div>
+                            <div class="chat-message">Reunião de colegiado...</div>
+                        </div>
+                        <div class="chat-meta">
+                            <div class="chat-time">Ontem</div>
+                            <div class="chat-badge">1</div>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-item">
+                        <div class="chat-avatar">BI</div>
+                        <div class="chat-info">
+                            <div class="chat-name">Biblioteca</div>
+                            <div class="chat-message">Seu empréstimo vence...</div>
+                        </div>
+                        <div class="chat-meta">
+                            <div class="chat-time">05/03</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="btn-add">
+                    <i class="fas fa-comment"></i> Nova Mensagem
+                </button>
+            </div>
+        </div>  
+		            <!-- Relatórios e Estatísticas -->
+        <div class="card" draggable="true">
+            <div class="card-header">
+                <div class="card-header-left">
+                    <div class="card-icon bg-warning">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <div class="card-title">Relatórios e Estatísticas</div>
+                </div>
+                <div class="card-actions">
+                    <div class="card-action">
+                        <i class="fas fa-sync"></i>
+                    </div>
+                    <div class="card-action">
+                        <i class="fas fa-ellipsis-h"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card-content">
+                <div class="stat-item">
+                    <div class="stat-header">
+                        <div class="stat-title">Crescimento de Alunos</div>
+                        <div class="stat-value">+12%</div>
+                    </div>
+                    <div class="stat-chart">
+                        <div class="chart-bars">
+                            <div class="chart-bar" style="height: 40%;"></div>
+                            <div class="chart-bar" style="height: 55%;"></div>
+                            <div class="chart-bar" style="height: 65%;"></div>
+                            <div class="chart-bar" style="height: 70%;"></div>
+                            <div class="chart-bar" style="height: 85%;"></div>
+                            <div class="chart-bar" style="height: 82%;"></div>
+                        </div>
+                        <div class="chart-legend">
+                            <div>2020</div>
+                            <div>2021</div>
+                            <div>2022</div>
+                            <div>2023</div>
+                            <div>2024</div>
+                            <div>2025</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-header">
+                        <div class="stat-title">Distribuição de Professores</div>
+                    </div>
+                    <div style="display: flex;">
+                        <div style="width: 50%;">
+                            <div class="pie-chart">
+                                <div style="width: 120px; height: 120px; border-radius: 50%; background: conic-gradient(var(--primary-color) 0% 30%, var(--success-color) 30% 55%, var(--warning-color) 55% 70%, var(--accent-color) 70% 100%);"></div>
+                            </div>
+                        </div>
+                        <div style="width: 50%;">
+                            <div class="legend-item">
+                                <div class="legend-color" style="background-color: var(--primary-color);"></div>
+                                <span>Engenharia (30%)</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background-color: var(--success-color);"></div>
+                                <span>Medicina (25%)</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background-color: var(--warning-color);"></div>
+                                <span>Direito (15%)</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background-color: var(--accent-color);"></div>
+                                <span>Outros (30%)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            </div> 
+		 </div>
+		     <!-- Page Cursos -->
+		     <div class="content-page" id="cursos">
+			       <div class="table-container">
+        <div class="table-header">
+            <div class="table-title">Cursos</div>
+            <button class="btn btn-primary">
+                <i class="fas fa-plus"></i> Adicionar Curso
+            </button>
+        </div>
+        
+        <div class="filters">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Pesquisar cursos...">
+            </div>
+            
+            <select class="filter-select">
+                <option value="">Todos os departamentos</option>
+                <option value="economia">Economia</option>
+                <option value="gestao">Gestão</option>
+                <option value="financas">Finanças</option>
+                <option value="marketing">Marketing</option>
+            </select>
+            
+            <select class="filter-select">
+                <option value="">Todos os graus</option>
+                <option value="licenciatura">Licenciatura</option>
+                <option value="mestrado">Mestrado</option>
+                <option value="doutoramento">Doutoramento</option>
+            </select>
+            
+            <button class="btn btn-outlined">
+                <i class="fas fa-filter"></i> Filtrar
+            </button>
+        </div>
+        
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Nome do Curso</th>
+                    <th>Departamento</th>
+                    <th>Duração</th>
+                    <th>Alunos</th>
+                    <th>Disciplinas</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="Nome do Curso">Licenciatura em Economia</td>
+                    <td data-label="Departamento">Economia</td>
+                    <td data-label="Duração">3 anos</td>
+                    <td data-label="Alunos">412</td>
+                    <td data-label="Disciplinas">32</td>
+                    <td data-label="Ações" class="actions-cell">
+                        <button class="action-btn view-btn" title="Ver detalhes">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="action-btn edit-btn" title="Editar">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="action-btn delete-btn" title="Eliminar">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td data-label="Nome do Curso">Mestrado em Gestão</td>
+                    <td data-label="Departamento">Gestão</td>
+                    <td data-label="Duração">2 anos</td>
+                    <td data-label="Alunos">267</td>
+                    <td data-label="Disciplinas">24</td>
+                    <td data-label="Ações" class="actions-cell">
+                        <button class="action-btn view-btn" title="Ver detalhes">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="action-btn edit-btn" title="Editar">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="action-btn delete-btn" title="Eliminar">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td data-label="Nome do Curso">Mestrado em Finanças</td>
+                    <td data-label="Departamento">Finanças</td>
+                    <td data-label="Duração">2 anos</td>
+                    <td data-label="Alunos">189</td>
+                    <td data-label="Disciplinas">21</td>
+                    <td data-label="Ações" class="actions-cell">
+                        <button class="action-btn view-btn" title="Ver detalhes">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="action-btn edit-btn" title="Editar">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="action-btn delete-btn" title="Eliminar">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td data-label="Nome do Curso">Doutoramento em Economia</td>
+                    <td data-label="Departamento">Economia</td>
+                    <td data-label="Duração">4 anos</td>
+                    <td data-label="Alunos">45</td>
+                    <td data-label="Disciplinas">18</td>
+                    <td data-label="Ações" class="actions-cell">
+                        <button class="action-btn view-btn" title="Ver detalhes">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="action-btn edit-btn" title="Editar">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="action-btn delete-btn" title="Eliminar">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="pagination">
+            <button class="page-btn">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="page-btn active">1</button>
+            <button class="page-btn">2</button>
+            <button class="page-btn">3</button>
+            <button class="page-btn">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+		     </div>
+			  <!-- Page disciplinas -->
+			  <div class="content-page" id="disciplinas">
+			        <div class="table-container">
+                <div class="table-header">
+                    <div class="table-title">Disciplinas</div>
+                    <button class="btn btn-primary">
+                        <i class="fas fa-plus"></i> Adicionar Disciplina
+                    </button>
+                </div>
+                
+                <div class="filters">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Pesquisar disciplinas...">
+				    </div>
+                    
+					<select class="filter-select">
+                        <option value="">Todos os cursos</option>
+                        <option value="economia">Licenciatura em Economia</option>
+                        <option value="gestao">Mestrado em Gestão</option>
+                        <option value="financas">Mestrado em Finanças</option>
+                        <option value="doutoramento">Doutoramento em Economia</option>
+                    </select>
+                    
+                    <select class="filter-select">
+                        <option value="">Todos os semestres</option>
+                        <option value="1">1º Semestre</option>
+                        <option value="2">2º Semestre</option>
+                    </select>
+                    
+                    <button class="btn btn-outlined">
+                        <i class="fas fa-filter"></i> Filtrar
+                    </button>
+                </div>
+                
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Nome da Disciplina</th>
+                            <th>Curso</th>
+                            <th>Semestre</th>
+                            <th>Professor</th>
+                            <th>Alunos Inscritos</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Nome da Disciplina">Macroeconomia</td>
+                            <td data-label="Curso">Licenciatura em Economia</td>
+                            <td data-label="Semestre">1º</td>
+                            <td data-label="Professor">António Ferreira</td>
+                            <td data-label="Alunos Inscritos">78</td>
+                            <td data-label="Ações" class="actions-cell">
+                                <button class="action-btn view-btn" title="Ver detalhes">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="action-btn edit-btn" title="Editar">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="action-btn delete-btn" title="Eliminar">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-label="Nome da Disciplina">Gestão Estratégica</td>
+                            <td data-label="Curso">Mestrado em Gestão</td>
+                            <td data-label="Semestre">2º</td>
+                            <td data-label="Professor">Maria Santos</td>
+                            <td data-label="Alunos Inscritos">45</td>
+                            <td data-label="Ações" class="actions-cell">
+                                <button class="action-btn view-btn" title="Ver detalhes">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="action-btn edit-btn" title="Editar">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="action-btn delete-btn" title="Eliminar">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-label="Nome da Disciplina">Mercados Financeiros</td>
+                            <td data-label="Curso">Mestrado em Finanças</td>
+                            <td data-label="Semestre">1º</td>
+                            <td data-label="Professor">João Rodrigues</td>
+                            <td data-label="Alunos Inscritos">38</td>
+                            <td data-label="Ações" class="actions-cell">
+                                <button class="action-btn view-btn" title="Ver detalhes">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="action-btn edit-btn" title="Editar">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="action-btn delete-btn" title="Eliminar">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-label="Nome da Disciplina">Marketing Digital</td>
+                            <td data-label="Curso">Mestrado em Gestão</td>
+                            <td data-label="Semestre">2º</td>
+                            <td data-label="Professor">Ana Costa</td>
+                            <td data-label="Alunos Inscritos">52</td>
+                            <td data-label="Ações" class="actions-cell">
+                                <button class="action-btn view-btn" title="Ver detalhes">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="action-btn edit-btn" title="Editar">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="action-btn delete-btn" title="Eliminar">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="pagination">
+                    <button class="page-btn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="page-btn active">1</button>
+                    <button class="page-btn">2</button>
+                    <button class="page-btn">3</button>
+                    <button class="page-btn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+			  </div>
+			  <!-- Page Professores -->
+			  <div class="content-page" id="professores">
+			          <div class="table-container">
+                <div class="table-header">
+                    <div class="table-title">Professores</div>
+                    <button class="btn btn-primary">
+                        <i class="fas fa-plus"></i> Adicionar Professor
+                    </button>
+                </div>
+                
+                <div class="filters">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Pesquisar professores...">
+                    </div>
+                    
+                    <select class="filter-select">
+                        <option value="">Todos os departamentos</option>
+                        <option value="economia">Economia</option>
+                        <option value="gestao">Gestão</option>
+                        <option value="financas">Finanças</option>
+                        <option value="marketing">Marketing</option>
+                    </select>
+                    
+                    <select class="filter-select">
+                        <option value="">Todas as categorias</option>
+                        <option value="assistente">Professor Assistente</option>
+                        <option value="auxiliar">Professor Auxiliar</option>
+                        <option value="associado">Professor Associado</option>
+                        <option value="catedratico">Professor Catedrático</option>
+                    </select>
+                    
+                    <button class="btn btn-outlined">
+                        <i class="fas fa-filter"></i> Filtrar
+                    </button>
+                </div>
+                
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Data de Nascimento</th>
+                            <th>Departamento</th>
+                            <th>Disciplinas</th>
+                            <th>Salário (€)</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Nome">António Ferreira</td>
+                            <td data-label="Data de Nascimento">15/03/1975</td>
+                            <td data-label="Departamento">Economia</td>
+                            <td data-label="Disciplinas">3</td>
+                            <td data-label="Salário (€)">3.750,00</td>
+                            <td data-label="Ações" class="actions-cell">
+                                <button class="action-btn view-btn" title="Ver detalhes">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="action-btn edit-btn" title="Editar">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="action-btn delete-btn" title="Eliminar">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-label="Nome">Maria Santos</td>
+                            <td data-label="Data de Nascimento">24/07/1982</td>
+                            <td data-label="Departamento">Gestão</td>
+                            <td data-label="Disciplinas">4</td>
+                            <td data-label="Salário (€)">3.250,00</td>
+                            <td data-label="Ações" class="actions-cell">
+                                <button class="action-btn view-btn" title="Ver detalhes">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="action-btn edit-btn" title="Editar">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="action-btn delete-btn" title="Eliminar">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+						<tr>
+                            <td data-label="Nome">João Rodrigues</td>
+                            <td data-label="Data de Nascimento">08/11/1970</td>
+                            <td data-label="Departamento">Finanças</td>
+                            <td data-label="Disciplinas">5</td>
+                            <td data-label="Salário (€)">4.200,00</td>
+                            <td data-label="Ações" class="actions-cell">
+                                <button class="action-btn view-btn" title="Ver detalhes">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="action-btn edit-btn" title="Editar">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="action-btn delete-btn" title="Eliminar">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-label="Nome">Ana Costa</td>
+                            <td data-label="Data de Nascimento">17/05/1978</td>
+                            <td data-label="Departamento">Marketing</td>
+                            <td data-label="Disciplinas">3</td>
+                            <td data-label="Salário (€)">3.850,00</td>
+                            <td data-label="Ações" class="actions-cell">
+                                <button class="action-btn view-btn" title="Ver detalhes">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="action-btn edit-btn" title="Editar">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="action-btn delete-btn" title="Eliminar">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="pagination">
+                    <button class="page-btn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="page-btn active">1</button>
+                    <button class="page-btn">2</button>
+                    <button class="page-btn">3</button>
+                    <button class="page-btn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+			  </div>
+			  <!-- Page Alunos -->
+			  <div class="content-page" id="alunos">
+			       <div class="table-container">
+                <div class="table-header">
+                    <div class="table-title">Alunos</div>
+                    <button class="btn btn-primary">
+                        <i class="fas fa-plus"></i> Adicionar Aluno
+                    </button>
+                </div>
+                
+                <div class="filters">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Pesquisar alunos...">
+                    </div>
+                    
+                    <select class="filter-select">
+                        <option value="">Todos os cursos</option>
+                        <option value="economia">Licenciatura em Economia</option>
+                        <option value="gestao">Mestrado em Gestão</option>
+                        <option value="financas">Mestrado em Finanças</option>
+                        <option value="doutoramento">Doutoramento em Economia</option>
+                    </select>
+                    
+                    <select class="filter-select">
+                        <option value="">Todos os anos</option>
+                        <option value="1">1º Ano</option>
+                        <option value="2">2º Ano</option>
+                        <option value="3">3º Ano</option>
+                        <option value="4">4º Ano</option>
+                    </select>
+                    
+                    <button class="btn btn-outlined">
+                        <i class="fas fa-filter"></i> Filtrar
+                    </button>
+                </div>
+                
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Nº de Matrícula</th>
+                            <th>Data de Nascimento</th>
+                            <th>Curso</th>
+                            <th>Nota HTML</th>
+                            <th>Nota CSS</th>
+                            <th>Nota JS</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Nome">Pedro Oliveira</td>
+                            <td data-label="Nº de Matrícula">20230001</td>
+                            <td data-label="Data de Nascimento">12/09/2002</td>
+                            <td data-label="Curso">Licenciatura em Economia</td>
+                            <td data-label="Nota HTML">18</td>
+                            <td data-label="Nota CSS">16</td>
+                            <td data-label="Nota JS">17</td>
+                            <td data-label="Ações" class="actions-cell">
+                                <button class="action-btn view-btn" title="Ver detalhes">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="action-btn edit-btn" title="Editar">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="action-btn delete-btn" title="Eliminar">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-label="Nome">Carolina Martins</td>
+                            <td data-label="Nº de Matrícula">20230042</td>
+                            <td data-label="Data de Nascimento">05/03/2001</td>
+                            <td data-label="Curso">Mestrado em Gestão</td>
+                            <td data-label="Nota HTML">19</td>
+                            <td data-label="Nota CSS">18</td>
+                            <td data-label="Nota JS">19</td>
+                            <td data-label="Ações" class="actions-cell">
+                                <button class="action-btn view-btn" title="Ver detalhes">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="action-btn edit-btn" title="Editar">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="action-btn delete-btn" title="Eliminar">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-label="Nome">Miguel Pereira</td>
+                            <td data-label="Nº de Matrícula">20230128</td>
+                            <td data-label="Data de Nascimento">23/11/2000</td>
+                            <td data-label="Curso">Mestrado em Finanças</td>
+                            <td data-label="Nota HTML">15</td>
+                            <td data-label="Nota CSS">14</td>
+                            <td data-label="Nota JS">16</td>
+                            <td data-label="Ações" class="actions-cell">
+                                <button class="action-btn view-btn" title="Ver detalhes">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="action-btn edit-btn" title="Editar">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="action-btn delete-btn" title="Eliminar">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-label="Nome">Sofia Ribeiro</td>
+                            <td data-label="Nº de Matrícula">20230215</td>
+                            <td data-label="Data de Nascimento">18/07/1999</td>
+                            <td data-label="Curso">Doutoramento em Economia</td>
+                            <td data-label="Nota HTML">17</td>
+                            <td data-label="Nota CSS">17</td>
+                            <td data-label="Nota JS">18</td>
+                            <td data-label="Ações" class="actions-cell">
+                                <button class="action-btn view-btn" title="Ver detalhes">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="action-btn edit-btn" title="Editar">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="action-btn delete-btn" title="Eliminar">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="pagination">
+                    <button class="page-btn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="page-btn active">1</button>
+                    <button class="page-btn">2</button>
+                    <button class="page-btn">3</button>
+                    <button class="page-btn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+			  </div>
+	    </div>	
+      </div>
+</div>
+</body>
+</html>
