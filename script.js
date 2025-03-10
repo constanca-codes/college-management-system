@@ -2,20 +2,20 @@ document.querySelectorAll('.nav-link').forEach(item => {
     item.addEventListener('click', function(e) {
         e.preventDefault(); // Prevent default link behavior
         
-        // Remove a classe active de todos os itens do menu
+        
         document.querySelectorAll('.nav-link').forEach(i => {
             i.classList.remove('active');
         });
         
-        // Adiciona a classe active ao item clicado
+        
         this.classList.add('active');
         
-        // Esconde todas as páginas
+        
         document.querySelectorAll('.content-page').forEach(page => {
             page.classList.remove('active');
         });
         
-        // Mostra a página correspondente ao item clicado
+        
         const targetId = this.getAttribute('data-target');
         const targetElement = document.getElementById(targetId);
         if (targetElement) {
@@ -24,7 +24,7 @@ document.querySelectorAll('.nav-link').forEach(item => {
     });
 });
 
-// Função de drag-and-drop
+
 function configurarDragAndDrop() {
     let draggableCards = document.querySelectorAll('.card');
     let grid = document.querySelector('.grid');  // Alterado para .grid
@@ -65,7 +65,7 @@ function configurarDragAndDrop() {
             if (this !== draggedCard) {
                 this.style.backgroundColor = 'white';
                 
-                // Trocar os cards de posição
+                
                 const allCards = Array.from(grid.children);  // Alterado para .grid
                 const indexDragged = allCards.indexOf(draggedCard);
                 const indexTarget = allCards.indexOf(this);
@@ -80,10 +80,10 @@ function configurarDragAndDrop() {
     });
 }
 
-// Configuração de drag-and-drop após o carregamento
+
 configurarDragAndDrop();
 
-// Simulação de eventos de calendário
+
 document.querySelectorAll('.calendar-day').forEach(day => {
     day.addEventListener('click', function() {
         document.querySelectorAll('.calendar-day').forEach(d => {
@@ -96,7 +96,7 @@ document.querySelectorAll('.calendar-day').forEach(day => {
     });
 });
 
-// Simulação cliques nos tabs de mensagens
+
 document.querySelectorAll('.tab').forEach(tab => {
     tab.addEventListener('click', function() {
         document.querySelectorAll('.tab').forEach(t => {
@@ -106,7 +106,7 @@ document.querySelectorAll('.tab').forEach(tab => {
     });
 });
 
-// Simulação cliques nos chats
+
 document.querySelectorAll('.chat-item').forEach(chat => {
     chat.addEventListener('click', function() {
         document.querySelectorAll('.chat-item').forEach(c => {
